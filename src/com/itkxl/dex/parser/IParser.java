@@ -4,4 +4,6 @@ public interface IParser {
 
     void parse(byte[] bytes);
 
+    void print();
+
 }
