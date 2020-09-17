@@ -6,6 +6,7 @@ import com.itkxl.dex.parser.item.*;
 
 import java.util.*;
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 /**
  * Header的固定大小为0x70,偏移地址从0x00到0x70
@@ -22,8 +23,7 @@ public class HeaderParser implements IParser {
     }
 
 
-    private Map<String, AbsItemParser> parserMap = new LinkedHashMap<>();
-    private Map<String, Object> parseResultMap = new HashMap<>();
+    private Map<String, AbsItemParser> parserMap = new HashMap<>();
 
     private void addItemParser(AbsItemParser parser){
         parserMap.put(parser.key(),parser);
@@ -39,15 +39,34 @@ public class HeaderParser implements IParser {
         addItemParser(new LinkSizeItemParser());
         addItemParser(new LinkOffItemParser());
         addItemParser(new MapOffItemParser());
+        addItemParser(new StringIdsSizeItemParser());
+        addItemParser(new StringIdsOffItemParser());
+        addItemParser(new TypeIdsSizeItemParser());
+        addItemParser(new TypeIdsOffItemParser());
+        addItemParser(new ProtoIdsSizeItemParser());
+        addItemParser(new ProtoIdsOffItemParser());
+        addItemParser(new FieldIdsSizeItemParser());
+        addItemParser(new FieldIdsOffItemParser());
+        addItemParser(new MethodIdsSizeItemParser());
+        addItemParser(new MethodIdsOffItemParser());
+        addItemParser(new ClassDefsSizeItemParser());
+        addItemParser(new ClassDefsOffItemParser());
+        addItemParser(new DataSizeItemParser());
+        addItemParser(new DataOffItemParser());
     }
 
 
     public <T> T getParseResult(String key){
-        Object result = parseResultMap.get(key);
-        if (result == null){
+        AbsItemParser parser = parserMap.get(key);
+
+        if (parser == null){
+            throw new IllegalArgumentException("Error key :" +key);
+        }
+
+        if (parser.getResult() == null){
             throw new RuntimeException("Please invoke HeaderParser.parse first");
         }
-        return (T) result;
+        return (T) parser.getResult();
     }
 
 
@@ -58,7 +77,6 @@ public class HeaderParser implements IParser {
             @Override
             public void accept(String key, AbsItemParser parser) {
                 parser.parse(bytes);
-                parseResultMap.put(key,parser.getResult());
             }
         });
     }
