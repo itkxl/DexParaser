@@ -10,7 +10,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
 public class EndianTagItemParser extends AbsIntItemParser {
     @Override
     public String key() {
-        return "endian";
+        return "Endian";
     }
 
     @Override

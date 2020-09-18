@@ -1,7 +1,10 @@
 package com.itkxl.dex.parser;
 
+import com.itkxl.dex.parser.impl.HeaderParser;
 import sun.rmi.runtime.Log;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
@@ -11,32 +14,43 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-
-        Map<String,Integer> map = new LinkedHashMap<>();
-
-
-        map.put("4",4);
-
-        map.put("1",1);
-        map.put("2",2);
-        map.put("3",3);
-        map.put("5",5);
-
-
-
-        map.forEach(new BiConsumer<String, Integer>() {
-            @Override
-            public void accept(String s, Integer integer) {
-
-                System.out.println("s:"+s +",integer:"+integer);
-
-
-            }
-        });
+        byte[] srcByte = getSrcByte();
+        HeaderParser.get().parse(srcByte);
+        HeaderParser.get().print();
 
     }
 
 
+
+    private static byte[] getSrcByte(){
+        byte[] srcByte = null;
+        FileInputStream fis = null;
+        ByteArrayOutputStream bos = null;
+        try{
+            fis = new FileInputStream("dex/classes.dex");
+            bos = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int len = 0;
+            while((len=fis.read(buffer)) != -1){
+                bos.write(buffer, 0, len);
+            }
+            srcByte = bos.toByteArray();
+        }catch(Exception e){
+            System.out.println("read res file error:"+e.toString());
+        }finally{
+            try{
+                fis.close();
+                bos.close();
+            }catch(Exception e){
+                System.out.println("close file error:"+e.toString());
+            }
+        }
+
+        if(srcByte == null){
+            System.out.println("get src error...");
+        }
+
+        return srcByte;
+    }
 
 }

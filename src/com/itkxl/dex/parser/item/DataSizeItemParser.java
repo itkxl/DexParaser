@@ -4,7 +4,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
 
 public class DataSizeItemParser extends AbsIntItemParser {
 
-    public static final String KEY = "dataSize";
+    public static final String KEY = "DataSize";
 
     @Override
     public String key() {

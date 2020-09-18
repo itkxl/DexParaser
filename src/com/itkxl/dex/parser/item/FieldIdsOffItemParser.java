@@ -4,7 +4,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
 
 public class FieldIdsOffItemParser extends AbsIntItemParser {
 
-    public static final String KEY = "fieldIdsOff";
+    public static final String KEY = "FieldIdsOff";
 
     @Override
     public String key() {

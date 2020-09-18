@@ -5,7 +5,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
 public class ProtoIdsOffItemParser extends AbsIntItemParser {
 
 
-    public static final String KEY = "protoIdsOff";
+    public static final String KEY = "ProtoIdsOff";
 
     @Override
     public String key() {

@@ -11,7 +11,7 @@ public class FileSizeItemParser extends AbsIntItemParser {
 
     @Override
     public String key() {
-        return "fileSize";
+        return "FileSize";
     }
 
     @Override

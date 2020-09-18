@@ -9,7 +9,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
  */
 public class MapOffItemParser extends AbsIntItemParser {
 
-    public static final String KEY = "mapOff";
+    public static final String KEY = "MapOff";
 
     @Override
     public String key() {

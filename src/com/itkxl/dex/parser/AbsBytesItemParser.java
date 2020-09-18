@@ -15,12 +15,11 @@ public abstract class AbsBytesItemParser extends AbsItemParser<byte[]>{
 
     @Override
     public void print() {
-        System.out.println("********************");
+        System.out.println("******************************************");
         StringBuilder result = new StringBuilder();
         for (byte b: item){
             result.append(b).append(" ");
         }
-        System.out.println(key() + ":"+result.toString());
-        System.out.println("********************");
+        System.out.println("*** " + key() + ":"+result.toString());
     }
 }

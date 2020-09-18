@@ -4,7 +4,7 @@ import com.itkxl.dex.parser.AbsIntItemParser;
 
 public class ProtoIdsSizeItemParser extends AbsIntItemParser {
 
-    public static final String KEY = "protoIdsSize";
+    public static final String KEY = "ProtoIdsSize";
 
     @Override
     public String key() {

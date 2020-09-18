@@ -13,7 +13,7 @@ public class ChecksumItemParser extends AbsIntItemParser {
 
     @Override
     public String key() {
-        return "checksum";
+        return "Checksum";
     }
 
     @Override

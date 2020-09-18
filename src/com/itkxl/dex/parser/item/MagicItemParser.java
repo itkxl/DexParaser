@@ -23,7 +23,7 @@ public class MagicItemParser extends AbsBytesItemParser {
 
     @Override
     public String key() {
-        return "magic";
+        return "Magic";
     }
 
 }

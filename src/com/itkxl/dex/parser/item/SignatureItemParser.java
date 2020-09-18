@@ -10,7 +10,7 @@ import com.itkxl.dex.parser.AbsBytesItemParser;
 public class SignatureItemParser extends AbsBytesItemParser {
     @Override
     public String key() {
-        return "signature";
+        return "Signature";
     }
 
     @Override

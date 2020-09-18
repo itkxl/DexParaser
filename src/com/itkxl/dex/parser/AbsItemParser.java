@@ -13,7 +13,7 @@ public abstract class AbsItemParser<T> implements IParser {
     public void parse(byte[] bytes) {
         byte[] itemBytes = new byte[length()];
         System.arraycopy(bytes,offSize(),itemBytes,0,length());
-        item = handleBytes(bytes);
+        item = handleBytes(itemBytes);
     }
 
     public abstract String key();

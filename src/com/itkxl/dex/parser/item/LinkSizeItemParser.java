@@ -11,7 +11,7 @@ public class LinkSizeItemParser extends AbsIntItemParser {
 
     @Override
     public String key() {
-        return "linkSize";
+        return "LinkSize";
     }
 
     @Override

@@ -23,7 +23,7 @@ public class HeaderParser implements IParser {
     }
 
 
-    private Map<String, AbsItemParser> parserMap = new HashMap<>();
+    private Map<String, AbsItemParser> parserMap = new LinkedHashMap<>();
 
     private void addItemParser(AbsItemParser parser){
         parserMap.put(parser.key(),parser);
@@ -89,5 +89,6 @@ public class HeaderParser implements IParser {
                 parser.print();
             }
         });
+        System.out.println("******************************************");
     }
 }
