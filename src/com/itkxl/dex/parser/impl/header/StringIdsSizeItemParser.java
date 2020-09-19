@@ -1,6 +1,4 @@
-package com.itkxl.dex.parser.item;
-
-import com.itkxl.dex.parser.AbsIntItemParser;
+package com.itkxl.dex.parser.impl.header;
 
 public class StringIdsSizeItemParser  extends AbsIntItemParser {
 

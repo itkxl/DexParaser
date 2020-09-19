@@ -20,30 +20,112 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baeb9c38-2926-49ab-8df6-6a7ca29fa3c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsSizeItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsOffItemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsSizeItemParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/AbsIdsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/StringIdsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsBytesItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsBytesItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsIntItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsIntItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsItemParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/HeaderParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/HeaderParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MagicItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MagicItemParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MapOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MapOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/IdsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/IdsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ChecksumItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ChecksumItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ClassDefsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ClassDefsSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/DataOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/DataSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/EndianTagItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/EndianTagItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FieldIdsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FieldIdsSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FileSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FileSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/HeaderSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/HeaderSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/LinkOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/LinkOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/LinkSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/LinkSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MagicItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MagicItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MapOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MapOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MethodIdsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MethodIdsSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ProtoIdsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ProtoIdsSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/SignatureItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/SignatureItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/StringIdsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/StringIdsSizeItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsOffItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/TypeIdsOffItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsSizeItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/TypeIdsSizeItemParser.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1410234155">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="76" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="76" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="210" />
+          <entry key="txt" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="210" />
+          <entry key="PLAIN_TEXT" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/StringIdsParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/SignatureItemParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/StringIdsOffItemParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,8 +135,50 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MagicItemParser</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsIntItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/AbsBytesItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/HeaderParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/TypeIdsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/StringIdsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/SignatureItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ProtoIdsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MethodIdsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MapOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/MagicItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/LinkSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/LinkOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/HeaderSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FileSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/FieldIdsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/EndianTagItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/DataOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsSizeItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ClassDefsOffItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/item/ChecksumItemParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/IdsParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/AbsIdsParser.java" />
+        <option value="$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/StringIdsParser.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -63,18 +187,89 @@
   </component>
   <component name="ProjectId" id="1hb52aXymXaDCIPg6OM05Xf5hQZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="dex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DexParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DexParser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600345978444" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600420663716" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.itkxl.dex.parser.item" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -104,19 +299,108 @@
       <option name="presentableId" value="Default" />
       <updated>1600251312336</updated>
     </task>
+    <task id="LOCAL-00001" summary="代码结构调整">
+      <created>1600412056470</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600412056470</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.83850265" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.83850265" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32941177" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="代码结构调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码结构调整" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1093" y="445" key="#com.intellij.ide.util.MemberChooser" timestamp="1600354963788">
@@ -139,5 +423,263 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="981" y="364" width="598" height="735" key="find.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1600355630574" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsBytesItemParser.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsItemParser.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="method#getSrcByte#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/TypeIdsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/TypeIdsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/StringIdsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ProtoIdsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ProtoIdsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MethodIdsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MethodIdsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MapOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/MagicItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/LinkSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/LinkOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ChecksumItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ClassDefsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/ClassDefsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/DataOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/DataSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/EndianTagItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FieldIdsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FileSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/FieldIdsSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/HeaderSizeItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/IdsParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/HeaderParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsIntItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/AbsBytesItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/IParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/AbsIdsParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/ids/StringIdsParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/SignatureItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itkxl/dex/parser/impl/header/StringIdsOffItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -1,4 +1,6 @@
-package com.itkxl.dex.parser;
+package com.itkxl.dex.parser.impl.header;
+
+import com.itkxl.dex.parser.IParser;
 
 /**
  * @Author: itkxl

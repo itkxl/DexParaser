@@ -1,12 +1,11 @@
 package com.itkxl.dex.parser.impl;
 
-import com.itkxl.dex.parser.AbsItemParser;
+import com.itkxl.dex.parser.impl.header.AbsItemParser;
 import com.itkxl.dex.parser.IParser;
-import com.itkxl.dex.parser.item.*;
+import com.itkxl.dex.parser.impl.header.*;
 
 import java.util.*;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 /**
  * Header的固定大小为0x70,偏移地址从0x00到0x70

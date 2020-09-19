@@ -1,6 +1,4 @@
-package com.itkxl.dex.parser.item;
-
-import com.itkxl.dex.parser.AbsBytesItemParser;
+package com.itkxl.dex.parser.impl.header;
 
 /**
  * 魔数，这个字节必须出现在.dex文件的开头，系统在加载dex文件的时候会进行识别
