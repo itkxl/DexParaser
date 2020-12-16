@@ -25,7 +25,6 @@ public abstract class AbsIntItemParser extends AbsItemParser <Integer> {
 
     @Override
     public void print() {
-        System.out.println("******************************************");
         System.out.println("*** " + key() + ":"+ item);
     }
 }

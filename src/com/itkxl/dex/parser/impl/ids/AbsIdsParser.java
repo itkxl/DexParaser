@@ -9,6 +9,10 @@ import com.itkxl.dex.parser.IParser;
  */
 public abstract class AbsIdsParser implements IParser {
 
+    public abstract String key();
+
+
     abstract int getItemLength();
+
 
 }

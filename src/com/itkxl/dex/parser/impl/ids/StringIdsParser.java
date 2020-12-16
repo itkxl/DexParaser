@@ -10,9 +10,15 @@ public class StringIdsParser extends AbsIdsParser {
 
 
     @Override
+    public String key() {
+        return "String_id_item";
+    }
+
+    @Override
     int getItemLength() {
         return 4;
     }
+
 
     @Override
     public void parse(byte[] bytes) {

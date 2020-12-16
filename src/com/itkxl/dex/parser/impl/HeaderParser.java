@@ -82,12 +82,13 @@ public class HeaderParser implements IParser {
 
     @Override
     public void print() {
+        System.out.println("HEADER******************************************");
         parserMap.forEach(new BiConsumer<String, AbsItemParser>() {
             @Override
             public void accept(String s, AbsItemParser parser) {
                 parser.print();
             }
         });
-        System.out.println("******************************************");
+        System.out.println("HEADER******************************************");
     }
 }
