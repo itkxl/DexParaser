@@ -1,6 +1,8 @@
 package com.itkxl.dex.parser;
 
 import com.itkxl.dex.parser.impl.HeaderParser;
+import com.itkxl.dex.parser.impl.IdsParser;
+import com.itkxl.dex.parser.util.Util;
 import sun.rmi.runtime.Log;
 
 import java.io.ByteArrayOutputStream;
@@ -15,8 +17,13 @@ public class Main {
 
     public static void main(String[] args) {
         byte[] srcByte = getSrcByte();
+
         HeaderParser.get().parse(srcByte);
         HeaderParser.get().print();
+
+        IdsParser.get().parse(srcByte);
+        IdsParser.get().print();
+
 
     }
 
