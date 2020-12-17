@@ -11,9 +11,13 @@ import com.itkxl.dex.parser.util.Util;
  * description:
  */
 public class TypeIdsParser extends AbsIdsParser<TypeIdItem> {
+
+
+    public static final String KEY = "type_id_item";
+
     @Override
     public String key() {
-        return "type_id_item";
+        return KEY;
     }
 
     @Override

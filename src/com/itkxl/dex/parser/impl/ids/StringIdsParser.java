@@ -12,9 +12,11 @@ import com.itkxl.dex.parser.impl.ids.bean.StringIdItem;
  */
 public class StringIdsParser extends AbsIdsParser<StringIdItem> {
 
+    public static final String KEY = "string_id_item";
+
     @Override
     public String key() {
-        return "string_id_item";
+        return KEY;
     }
 
     @Override

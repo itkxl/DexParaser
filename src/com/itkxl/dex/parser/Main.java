@@ -1,5 +1,6 @@
 package com.itkxl.dex.parser;
 
+import com.itkxl.dex.parser.impl.DataParser;
 import com.itkxl.dex.parser.impl.HeaderParser;
 import com.itkxl.dex.parser.impl.IdsParser;
 import com.itkxl.dex.parser.util.Util;
@@ -24,6 +25,8 @@ public class Main {
         IdsParser.get().parse(srcByte);
         IdsParser.get().print();
 
+        DataParser.get().parse(srcByte);
+        DataParser.get().print();
 
     }
 

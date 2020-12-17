@@ -49,4 +49,8 @@ public abstract class AbsIdsParser<T> implements IParser {
             }
         });
     }
+
+    public List<T> getResult(){
+        return idsList;
+    }
 }
